@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body align="center">
+Please input length of tree:<br> <input id="sint"> <br>
+<button onclick="tree()">Make tree</button>
+<button onclick="reset()">Reset</button>
+<p id="test"></p>
+<script>
+function tree(){
+    var i = 0;
+    var num = document.getElementById("sint").value
+    while (i<num) {
+        for(var j = i; j>=0;j--) {
+            document.getElementById("test").innerHTML += "*";
+        }
+        document.getElementById("test").innerHTML += "<br>";
+        i++
+    }
+}
+function reset(){
+    document.getElementById("test").innerHTML = "";
+    document.getElementById("sint").value = "";
+}
+</script>
+</body>
+</html>
